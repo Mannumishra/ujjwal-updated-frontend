@@ -4,6 +4,7 @@ import "../ProductDetailPage/ProductDetail.css";
 import Product from "../../Component/Product/Product";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import Metatag from "../../Component/MetaTags/Metatag";
 
 const ProductDetailPage = () => {
   const { _id } = useParams();
@@ -18,7 +19,7 @@ const ProductDetailPage = () => {
       let res = await axios.get(`https://ujjwalbackend.onrender.com/api/product/${_id}`);
       console.log(res.data.data);
       setData(res.data.data);
-      setSelectedImage(res.data.data.image2); 
+      setSelectedImage(res.data.data.image2);
     } catch (error) {
       setError(error);
       console.log(error);
@@ -46,6 +47,12 @@ const ProductDetailPage = () => {
 
   return (
     <>
+      <Metatag
+        title="Precision Machine Tools and Accessories - Quality Products by Assorts"
+        description="Browse our extensive collection of precision machine tools, including lathe tool holders, rotary tables, and custom-designed accessories. Assorts offers high-quality products at competitive prices."
+        keyword="Precision tools, lathe tool holders, rotary tables, custom machine tools, Assorts products, milling tools, cutting tools, DIY tools"
+      />
+
       <section className="bread">
         <div className="overlay">
           <Container>
@@ -97,9 +104,9 @@ const ProductDetailPage = () => {
               md={6}
               sx={{ padding: { xs: "1rem", md: "2rem", sm: "1rem" } }}
             >
-              <Typography style={{fontSize:'30px'}} className="name" mt={5} mb={3}>
+              <Typography style={{ fontSize: '30px' }} className="name" mt={5} mb={3}>
                 <b>
-                {data.productname}
+                  {data.productname}
                 </b>
               </Typography>
               <Typography className="points" variant="body1" mb={3}>
@@ -111,12 +118,12 @@ const ProductDetailPage = () => {
       </div>
       <Container >
         <Typography mt={5}>
-          <Typography style={{textAlign:'center', fontSize:'30px'}} mb={3}>
+          <Typography style={{ textAlign: 'center', fontSize: '30px' }} mb={3}>
             <b>
-            Details Of {data.productname}
+              Details Of {data.productname}
             </b>
           </Typography>
-          <div style={{overflowX:'auto'}} dangerouslySetInnerHTML={{ __html: data.tableData }} />
+          <div style={{ overflowX: 'auto' }} dangerouslySetInnerHTML={{ __html: data.tableData }} />
         </Typography>
       </Container>
       <Product />

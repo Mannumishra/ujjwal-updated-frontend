@@ -4,9 +4,16 @@ import { Link } from "react-router-dom";
 // import abouimage from "../../images/about.jpg";
 import aboutus from "../../images/aboutus.jpeg";
 import "../AboutPage/AboutPage.css";
+import Metatag from "../../Component/MetaTags/Metatag";
 const AboutPage = () => {
   return (
     <>
+      <Metatag
+        title="About Assorts - Four Decades of Excellence in Manufacturing Precision Tools"
+        description="Learn about Assorts, a family-run business founded in 1975 under the guidance of Sh. Suresh Chandra Gupta. With over 40 years of experience, we manufacture high-quality machine tools and accessories for various industries worldwide."
+        keyword="Assorts, machine tools manufacturer, American tool holders, precision tools exporter, India machining tools, custom tools, Suresh Chandra Gupta"
+      />
+
       <section className="bread">
         <div class="overlay">
           <Container>
@@ -24,23 +31,23 @@ const AboutPage = () => {
       <Typography mt={5}>
         <Container>
           <Grid container>
-            <Grid item xs={12} md={6}  sx={{marginTop:{xs:'0' , md:'8rem' , sm:''}}}>
+            <Grid item xs={12} md={6} sx={{ marginTop: { xs: '0', md: '8rem', sm: '' } }}>
               <img src={aboutus} width={"100%"} alt="" />
             </Grid>
-            <Grid style={{paddingLeft:'35px', paddingTop:'35px'}} item xs={12} md={6}>
-            <Typography
-        style={{
-          textAlign: "center",
-          color: "rgb(18, 80, 141)",
-          fontFamily: "inherit",
-          fontWeight: "600",
-          // padding:'1rem'
-        }}
-        mb={2}
-        sx={{ fontSize: { xs: "25px", md: "30px", sm: "30px" }, margin:{xs:'0', sm:'0', md:'1'} }}
-      >
-        About Our Company
-      </Typography>
+            <Grid style={{ paddingLeft: '35px', paddingTop: '35px' }} item xs={12} md={6}>
+              <Typography
+                style={{
+                  textAlign: "center",
+                  color: "rgb(18, 80, 141)",
+                  fontFamily: "inherit",
+                  fontWeight: "600",
+                  // padding:'1rem'
+                }}
+                mb={2}
+                sx={{ fontSize: { xs: "25px", md: "30px", sm: "30px" }, margin: { xs: '0', sm: '0', md: '1' } }}
+              >
+                About Our Company
+              </Typography>
               <Typography variant="body1" class="aboutcontent">
                 Under the guidance of Sh. Suresh Chandra Gupta, the company was
                 started in 1975 with a small set up to start manufacturing the

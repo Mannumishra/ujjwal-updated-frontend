@@ -4,6 +4,7 @@ import "../CategoryPage/categoryPage.css";
 
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import Metatag from "../../Component/MetaTags/Metatag";
 
 const AllProductPage = () => {
   const { _id } = useParams();
@@ -66,6 +67,12 @@ const AllProductPage = () => {
 
   return (
     <>
+      <Metatag
+        title="Precision Machine Tools and Accessories - Quality Products by Assorts"
+        description="Browse our extensive collection of precision machine tools, including lathe tool holders, rotary tables, and custom-designed accessories. Assorts offers high-quality products at competitive prices."
+        keyword="Precision tools, lathe tool holders, rotary tables, custom machine tools, Assorts products, milling tools, cutting tools, DIY tools"
+      />
+
       <div className="categoryImage">
         <div className="overlay">
           <Container>

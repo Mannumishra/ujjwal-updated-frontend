@@ -6,6 +6,7 @@ import CallIcon from "@mui/icons-material/Call";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
+import Metatag from "../MetaTags/Metatag";
 const Contact = () => {
   const [data, setData] = useState({
     name: "",
@@ -20,13 +21,13 @@ const Contact = () => {
     setData({ ...data, [name]: value })
   }
 
-  const postdata = async(e) => {
+  const postdata = async (e) => {
     e.preventDefault()
     console.log(data)
     try {
       let res = await axios.post("https://ujjwalbackend.onrender.com/api/contact", data)
       if (res.status === 200) {
-        toast .success("Message sent successfully");
+        toast.success("Message sent successfully");
         setData({
           name: "",
           companyname: "",
@@ -51,6 +52,12 @@ const Contact = () => {
   }, []);
   return (
     <>
+      <Metatag
+        title="Contact Assorts - Your Reliable Manufacturer of Precision Tools"
+        description="Get in touch with Assorts. Our address: Shastri Nagar, Near Metro Station, Landmark Gurudwara. We are one of India's leading manufacturers and exporters of machine tools and accessories."
+        keyword="Contact Assorts, Assorts address, machine tools supplier contact, precision tools contact, Assorts customer service"
+      />
+
       <div class="contact-bg">
         <div className="overlay">
           <Container>
