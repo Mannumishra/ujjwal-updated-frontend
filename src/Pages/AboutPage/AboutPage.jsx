@@ -1,7 +1,8 @@
 import { Breadcrumbs, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import abouimage from "../../images/about.jpg";
+// import abouimage from "../../images/about.jpg";
+import aboutus from "../../images/aboutus.jpeg";
 import "../AboutPage/AboutPage.css";
 const AboutPage = () => {
   return (
@@ -23,8 +24,8 @@ const AboutPage = () => {
       <Typography mt={5}>
         <Container>
           <Grid container>
-            <Grid item xs={12} md={6}>
-              <img src={abouimage} width={"100%"} alt="" />
+            <Grid item xs={12} md={6}  sx={{marginTop:{xs:'0' , md:'8rem' , sm:''}}}>
+              <img src={aboutus} width={"100%"} alt="" />
             </Grid>
             <Grid style={{paddingLeft:'35px', paddingTop:'35px'}} item xs={12} md={6}>
             <Typography

@@ -1,6 +1,7 @@
 import React from "react";
 import aboutImage from "../../images/aboutmachine.jpg";
 
+
 import {Container, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 const About = () => {
